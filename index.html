@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrs. Mary Wakonyo Mwenja's Eulogy | Memorial Tribute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5d737e;
+            --secondary: #f0f7f4;
+            --accent: #87bba2;
+            --light: #fafafa;
+            --dark: #3a4a4f;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+            background-image: linear-gradient(rgba(250,250,250,0.95), rgba(250,250,250,0.95)), 
+                              url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .memorial-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 
+                0 15px 35px rgba(0,0,0,0.08),
+                0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            max-width: 700px;
+            margin: 2rem auto;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(135, 187, 162, 0.1);
+            position: relative;
+        }
+
+        .memorial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+        }
+        
+        .memorial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.15),
+                0 10px 25px rgba(135, 187, 162, 0.2);
+        }
+        
+        .memorial-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #4a5d66 50%, var(--dark) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memorial-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(135, 187, 162, 0.2) 0%, transparent 50%);
+        }
+        
+        .memorial-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .memorial-header p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+            margin-top: 0.5rem;
+        }
+        
+        .memorial-content {
+            padding: 3rem 2.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .memorial-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            border-radius: 2px;
+        }
+        
+        .memorial-content p {
+            font-size: 1.15rem;
+            margin: 2rem 0 2.5rem;
+            color: var(--text);
+            font-weight: 400;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent) 0%, #6ea085 100%);
+            color: white;
+            padding: 1.1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 1rem 0;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            box-shadow: 
+                0 8px 25px rgba(135, 187, 162, 0.3),
+                0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, var(--primary) 0%, #4a5d66 100%);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 
+                0 15px 40px rgba(135, 187, 162, 0.4),
+                0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .download-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .download-btn i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .file-info {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+
+        
+        .brand {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: var(--dark);
+            font-size: 0.9rem;
+            background: linear-gradient(135deg, rgba(93, 115, 126, 0.05), rgba(135, 187, 162, 0.05));
+            border-radius: 8px;
+            border: 1px solid rgba(135, 187, 162, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .brand-highlight:hover {
+            color: var(--primary);
+            text-shadow: 0 2px 4px rgba(135, 187, 162, 0.3);
+        }
+
+        .brand-divider {
+            color: var(--accent);
+            margin: 0 8px;
+            font-weight: 300;
+        }
+        
+        .decoration {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            opacity: 0.4;
+            z-index: 1;
+            animation: gentle-float 4s ease-in-out infinite;
+        }
+
+        @keyframes gentle-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(5deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .memorial-header h1 {
+                font-size: 2rem;
+            }
+            
+            .memorial-content {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .memorial-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .memorial-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .memorial-content {
+                padding: 1.8rem;
+            }
+            
+            .download-btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="memorial-card">
+            <div class="memorial-header">
+                <div class="decoration">
+                    <i class="fas fa-feather-alt" style="font-size: 1.3rem;"></i>
+                </div>
+                <h1>Mrs. Mary Wakonyo Mwenja</h1>
+                <p>1946 - 22nd July 2025</p>
+            </div>
+            <div class="memorial-content">
+                <p>We gather here to celebrate a life of love, wisdom, and kindness. 
+                This eulogy honors the beautiful soul that touched so many lives.</p>
+                
+                <a href="MRS_MARY_WAKONYO.pdf" class="download-btn">
+                    <i class="fas fa-download"></i> Download Memorial Tribute
+                </a>
+                
+                <div class="file-info">
+                    PDF Document | 2.4MB
+                </div>
+
+
+
+            </div>
+        </div>
+        
+        <div class="brand">
+            By <span class="brand-highlight">MelzMedia</span> <span class="brand-divider">|</span> Compassionate Memorial Services
+        </div>
+    </div>
+
+    <script>
+        // Memorial tribute page - no JavaScript needed
+    </script>
+</body>
+</html>
